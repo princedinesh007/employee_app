@@ -1,0 +1,3 @@
+DBURL=mongodb+srv://test:ljTjgzONNI1mvxBV@employeecluster.tj7czln.mongodb.net/?retryWrites=true&w=majority&appName=EmployeeCluster
+PORT=3000
+SECRET_KEY='dieshkumar1905919500mithrdhanss';
