@@ -3,13 +3,18 @@ const app = express();
 require('dotenv').config();
 const mongoose=require('mongoose');
 const Router=require('./Routes/userRoutes');
+const cors=require('cors')
 
 const PORT=process.env.PORT;
 const dbUrl=process.env.DBURL;
 
-
+app.use(cors({
+  origin: 'http://localhost:4200',  
+  methods: ['GET', 'POST'],}
+));
 app.use(express.json());
 app.use(Router);
+
 
 
 mongoose.connect(dbUrl).then(()=>{

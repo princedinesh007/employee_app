@@ -1,0 +1,27 @@
+<div>
+
+    <h2>{{isform ? "Register" :"Login"}} Form</h2>
+    <form [formGroup]="this.form">
+        <button (click)="toogleForm()">Toggle</button>
+        <div>
+            <label for="username">UserName</label>
+            <input type="text" id="username" formControlName="username">
+          </div>
+        
+          <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" formControlName="password">
+          </div>
+          <div [hidden]="!this.isform">
+            <label for="email">Email</label>
+            <input type="email" id="email" formControlName="email">
+          </div>
+
+          <div>
+            <button type="submit" (click)= "isform ? register() : login()">{{isform ? "Register" :"Login"}}</button>
+            <button>Reset</button>
+        </div>
+    </form>
+    
+</div>
+
